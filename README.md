@@ -95,3 +95,15 @@ ORDER BY sal asc;
 
 <출력결과>
 
+<img width="115" alt="출력결과7" src="https://github.com/HeoHoJun/DB-Practice/assets/116245224/ee0954d3-7a4e-41eb-ab03-bfe552719262">
+
+SELECT ename, deptno, sal
+
+FROM emp
+    
+ORDER BY deptno asc, sal desc;
+
+<출력결과>
+
+
+

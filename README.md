@@ -1,5 +1,5 @@
 # DB-Practice
-DB공부한 것
+DB공부한 것(07/25)
 
 ![실습스크립트](https://github.com/HeoHoJun/DB-Practice/assets/116245224/99f5431e-fbef-4fec-bcbc-b660a47eb5af)
 
@@ -62,4 +62,15 @@ SELECT ename || '의 직업은 ' || job || '입니다 ' as 직업정보
 FROM emp;
 
 <출력결과>
+
+![출력결과5](https://github.com/HeoHoJun/DB-Practice/assets/116245224/5319e27e-d67c-419e-855b-8e922c0b16f2)
+
+중복된 데이터를 제거해서 출력하기(DISTINCT)
+
+SELECT DISTINCT job
+
+FROM emp;
+
+<출력결과>
+
 

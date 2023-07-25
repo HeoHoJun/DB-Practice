@@ -45,4 +45,14 @@ FROM emp;
 
 <출력결과>
 
+![출력결과3](https://github.com/HeoHoJun/DB-Practice/assets/116245224/a5f19b37-816b-46a1-998f-a351553ec299)
+
+-> 사원 테이블의 이름과 월급을 서로 붙여서 출력
+
+SELECT ename || '의 월급은 ' || sal || '입니다 ' as 월급정보
+
+FROM emp;
+
+<출력결과>
+
 

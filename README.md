@@ -9,7 +9,7 @@ DB공부한 것
 
 SELECT empno, ename, sal
   
-  FROM emp;
+FROM emp;
 
 <출력결과>
 
@@ -22,4 +22,12 @@ SELECT *
 FROM emp;
 
 <출력결과>
+
+![출력결과1](https://github.com/HeoHoJun/DB-Practice/assets/116245224/27e0a87d-eec0-4530-877c-3a13b6f37e28)
+
+컬럼 별칭을 사용하ㅏ여 출력되는 컬럼명 변경하기
+
+SELECT empno as 사원번호, ename as 사원이름, sal as "Salary"
+
+FROM emp;
 

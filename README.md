@@ -1,5 +1,5 @@
 # DB-Practice
-DB공부한 것(07/25)
+- DB공부한 것(07/25)
 
 ![실습스크립트](https://github.com/HeoHoJun/DB-Practice/assets/116245224/99f5431e-fbef-4fec-bcbc-b660a47eb5af)
 
@@ -54,7 +54,7 @@ FROM emp;
 -> 사원 테이블의 이름과 월급을 서로 붙여서 출력
 
 
-**SELECT ename || '의 월급은 ' || sal || '입니다 ' as 월급정보**
+SELECT ename || '의 월급은 ' || sal || '입니다 ' as 월급정보
 
 FROM emp;
 
@@ -63,7 +63,7 @@ FROM emp;
 ![출력결과4](https://github.com/HeoHoJun/DB-Practice/assets/116245224/8c9b4b7a-a4f7-417c-be91-12e00f5145a9)
 
 
-**SELECT ename || '의 직업은 ' || job || '입니다 ' as 직업정보**
+SELECT ename || '의 직업은 ' || job || '입니다 ' as 직업정보
 
 FROM emp;
 

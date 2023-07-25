@@ -73,4 +73,6 @@ FROM emp;
 
 <출력결과>
 
+![출력결과6](https://github.com/HeoHoJun/DB-Practice/assets/116245224/51df0f52-f085-4a4c-aa07-ce7f17552cf7)
 
+-> 사원 테이블에서 직업을 출력하는데 중복된 데이터를 제외하고 출력

@@ -31,3 +31,18 @@ SELECT empno as 사원번호, ename as 사원이름, sal as "Salary"
 
 FROM emp;
 
+<출력결과>
+
+![출력결과2](https://github.com/HeoHoJun/DB-Practice/assets/116245224/2bf298d3-c199-4d36-a0fc-7aa8f53de276)
+
+-> 사원 테이블의 사원 번호와 이름과 월급을 출력하는데 컬럼명을 한글로 '사원번호', '사원이름'으로 출력
+
+연결 연산자 사용하기(||)
+
+SELECT ename || sal
+
+FROM emp;
+
+<출력결과>
+
+

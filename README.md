@@ -105,5 +105,5 @@ ORDER BY deptno asc, sal desc;
 
 <출력결과>
 
-
+<img width="165" alt="출력결과8" src="https://github.com/HeoHoJun/DB-Practice/assets/116245224/b59c9193-86de-4ff7-ae6b-248cc56f78ec">
 

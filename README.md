@@ -55,4 +55,11 @@ FROM emp;
 
 <출력결과>
 
+![출력결과4](https://github.com/HeoHoJun/DB-Practice/assets/116245224/8c9b4b7a-a4f7-417c-be91-12e00f5145a9)
+
+SELECT ename || '의 직업은 ' || job || '입니다 ' as 직업정보
+
+FROM emp;
+
+<출력결과>
 

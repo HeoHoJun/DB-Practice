@@ -169,9 +169,7 @@ FROM emp;
 
 ![출력결과12](https://github.com/HeoHoJun/DB-Practice/assets/116245224/1af8a0df-eb7c-4e0c-8779-2dc81d14d6b5)
 
--> 사원 테이블의 이름을 출력하는데 첫 번째 컬럼은 이름을 대문자로 출력하고 두 번째 컬럼은 이름을 소문자로 출력, 세 번째 컬럼은 이름의 첫 번째
-   
-  철자는 대문자로 하고 나머지는 소문자로 출력
+-> 사원 테이블의 이름을 출력하는데 첫 번째 컬럼은 이름을 대문자로 출력하고 두 번째 컬럼은 이름을 소문자로 출력, 세 번째 컬럼은 이름의 첫 번째 철자는 대문자로 하고 나머지는 소문자로 출력
 
 
 **문자에서 특정 철자 추출하기(SUBSTR)**
@@ -237,3 +235,122 @@ FROM emp;
 ![출력결과17](https://github.com/HeoHoJun/DB-Practice/assets/116245224/3342edfd-978c-46eb-b102-8d71903867e0)
 
 -> 이름과 월급을 출력하는데 월급 컬럼의 자릿수를 10자리로 하고 월급을 출력하고 남은 나머지 자리에 별표(*)를 채워서 출력
+
+
+**특정 철자 잘라내기(TRIM, RTRIM, LTRIM)**
+
+SELECT 'smith', LTRIM('smith','s'), RTRIM('smith','h'), TRIM('s' from 'smiths')
+
+FROM dual;
+
+<출력 결과>
+
+![출력결과18](https://github.com/HeoHoJun/DB-Practice/assets/116245224/a8a7d740-97b3-40f8-8ce7-e80ba85e0a36)
+
+-> 첫 번째 컬럼은 영어 단어 smith 철자를 출력하고 두 번째 컬럼은 영어 단어 smith에서 s를 잘라서 출력하고 세 번째 컬럼은 영어 단어 smith에서 h를 잘라서 출력하고 네 번째 컬럼은 영어 단어 smiths의 양쪽에 s를 잘라서 출력
+
+
+**반올림해서 출력하기(ROUND)**
+
+SELECT '876.567' as 숫자, ROUND(876.567,1)
+
+FROM dual;
+
+<출력 결과>
+
+![출력결과19](https://github.com/HeoHoJun/DB-Practice/assets/116245224/7d03fe4b-ea0c-4728-8a5c-5537f43e2e8d)
+
+-> 876.567 숫자를 출력하는데 소수점 두 번째 자리인 6에서 반올림해서 출력
+
+
+**숫자를 버리고 출력하기(TRUNC)**
+
+SELECT '876.567' as 숫자, TRUNC(876.567,1)
+
+FROM dual;
+
+<출력 결과>
+
+![출력결과20](https://github.com/HeoHoJun/DB-Practice/assets/116245224/bc2c10b8-bdac-4934-8be7-4993321767be)
+
+-> 876.567 숫자를 출력하는데 소수점 두 번째 자리인 6과 그 이후의 숫자들을 모두 버리고 출력
+
+
+**나눈 나머지 값 출력하기(MOD)**
+
+SELECT MOD(10,3)
+
+FROM DUAL;
+
+<출력 결과>
+
+![출력결과21](https://github.com/HeoHoJun/DB-Practice/assets/116245224/e2eb4121-c7a9-426a-b9fb-d9db71682e1f)
+
+-> 숫자 10을 3으로 나눈 나머지값이 어떻게 되는지 출력
+
+
+**날짜 간 개월 수 출력하기(MONTHS_BETWEEN)**
+
+SELECT ename, MONTHS_BETWEEN(sysdate,hiredate)
+
+FROM emp;
+
+<출력 결과>
+
+![출력결과22](https://github.com/HeoHoJun/DB-Practice/assets/116245224/c6a4c18c-57cb-466e-837a-0aeb471ee04d)
+
+-> 이름을 출력하고 입사한 날짜부터 오늘까지 총 몇 달을 근무했는지 출력
+
+
+**개월 수 더한 날짜 출력하기(ADD_MONTHS)**
+
+SELECT ADD_MONTHS(TO_DATE('2019-05-01','RRRR-MM-DD'), 100)
+
+FROM DUAL;
+
+<출력 결과>
+
+![출력결과23](https://github.com/HeoHoJun/DB-Practice/assets/116245224/6d225180-c4c2-4596-8a53-be8f988ec1cc)
+
+-> 2019년 5월 1일로부터 100달 뒤의 날짜는 어떻게 되는지 출력
+
+
+**특정 날짜 뒤에 오는 요일 날짜 출력하기(NEXT_DAY)**
+
+SELECT '2019/05/22' as 날짜, NEXT_DAY('2019/05/22', '월요일')
+
+FROM DUAL;
+
+<출력 결과>
+
+![출력결과24](https://github.com/HeoHoJun/DB-Practice/assets/116245224/84f7ed15-9ff4-46be-892a-e15ed1a18069)
+
+-> 2019년 5월 22일로부터 바로 돌아올 월요일의 날짜가 어떻게 되는지 출력
+
+
+**특정 날짜가 있는 달의 마지막 날짜 출력하기(LAST_DAY)**
+
+SELECT "2019/05/22' as 날짜, LAST_DAY('2019/05/22') as "마지막 날짜"
+
+FROM DUAL;
+
+<출력 결과>
+
+![출력결과25](https://github.com/HeoHoJun/DB-Practice/assets/116245224/e43fb90c-1752-4d6d-a001-5b9398938208)
+
+-> 2019년 5월 22일 해당 달의 마지막 날짜가 어떻게 되는지 출력
+
+
+**문자형으로 데이터 유형 변환하기(TO_CHAR)**
+
+SELECT ename, TO_CHAR(hiredate,'DAY') as 요일, TO_CHAR(sal,'999,999') as 월급
+
+FROM emp
+
+WHERE ename='SCOTT';
+
+<출력 결과>
+
+![출력결과26](https://github.com/HeoHoJun/DB-Practice/assets/116245224/32d54fa7-d78b-4604-9d3d-35dc3f5b4fdc)
+
+-> 이름이 SCOTT인 사원의 이름과 입사한 요일을 출력하고 SCOTT의 월급에 천 단위를 구분할 수 있는 콤마를 붙여 출력

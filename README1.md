@@ -157,3 +157,83 @@ WHERE job='SALESMAN' AND sal >= 1200;
 ![출력결과11](https://github.com/HeoHoJun/DB-Practice/assets/116245224/73f4b874-b5df-4a1e-9327-3c2ea1a9334f)
 
 -> 직업이 SALESMAN이고 월급이 1200 이상인 사원들의 이름, 월급, 직업 출력
+
+
+**대소문자 변환 함수 배우기(UPPER, LOWER, INITCAP)**
+
+SELECT UPPER(ename), LOWER(ename), INITCAP(ename)
+
+FROM emp;
+
+<출력 결과>
+
+![출력결과12](https://github.com/HeoHoJun/DB-Practice/assets/116245224/1af8a0df-eb7c-4e0c-8779-2dc81d14d6b5)
+
+-> 사원 테이블의 이름을 출력하는데 첫 번째 컬럼은 이름을 대문자로 출력하고 두 번째 컬럼은 이름을 소문자로 출력, 세 번째 컬럼은 이름의 첫 번째
+   
+  철자는 대문자로 하고 나머지는 소문자로 출력
+
+
+**문자에서 특정 철자 추출하기(SUBSTR)**
+
+SELECT SUBSTR('SMITH',1,3)
+
+FROM DUAL;
+
+<출력 결과>
+
+![출력결과13](https://github.com/HeoHoJun/DB-Practice/assets/116245224/47e65689-3152-434c-bda2-a18bb9707480)
+
+-> 영어 단어 SMITH에서 SMI만 잘라내서 출력
+
+
+**문자열의 길이를 출력하기**
+
+SELECT ename, LENGTH(ename)
+
+FROM emp;
+
+<출력 결과>
+
+![출력결과14](https://github.com/HeoHoJun/DB-Practice/assets/116245224/34e79e33-7ea4-4f5a-ae7c-fd3d41df362c)
+
+-> 이름을 출력하고 그 옆에 이름의 철자 개수를 출력
+
+
+**문자에서 특정 철자의 위치 출력하기(INSTR)**
+
+SELECT INSTR('SMITH','M')
+
+FROM DUAL;
+
+<출력 결과>
+
+![출력결과15](https://github.com/HeoHoJun/DB-Practice/assets/116245224/d4044d2e-f974-40b3-a3e1-09f5cc2e837b)
+
+-> 사원 이름 SMITH에서 알파벳 철자 M이 몇 번째 자리에 있는지 출력
+
+
+**특정 철자를 다른 철자로 변경하기(REPLACE)**
+
+SELECT ename, REPLACE(sal, 0, '*')
+
+FROM emp;
+
+<출력 결과>
+
+![출력결과16](https://github.com/HeoHoJun/DB-Practice/assets/116245224/d2791b83-bb31-43ef-b130-4ed8fa7fa0fe)
+
+-> 이름과 월급을 출력하는데 월급을 출력할 때 숫자 0을 *(별표)로 출력
+
+
+**특정 철자를 N개 만큼 채우기(LPAD, RPAD)**
+
+SELECT ename, LPAD(sal,10,'*') as salary1, RPAD(sal,10,'*') as salary2
+
+FROM emp;
+
+<출력 결과>
+
+![출력결과17](https://github.com/HeoHoJun/DB-Practice/assets/116245224/3342edfd-978c-46eb-b102-8d71903867e0)
+
+-> 이름과 월급을 출력하는데 월급 컬럼의 자릿수를 10자리로 하고 월급을 출력하고 남은 나머지 자리에 별표(*)를 채워서 출력
